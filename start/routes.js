@@ -19,7 +19,7 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 Route.get('/todos', 'TodoController.index').as('todos.index');
 Route.get('/todos/create', 'TodoController.create').as('todos.create');
-Route.todo('/todos/store', 'TodoController.store').as('todos.store');
+Route.post('/todos/store', 'TodoController.store').as('todos.store');
 Route.get('/todos/edit/:id', 'TodoController.edit').as('todos.edit');
-Route.todo('/todos/update/:id', 'TodoController.update').as('todos.update');
+Route.post('/todos/update/:id', 'TodoController.update').as('todos.update');
 Route.get('/todos/delete/:id', 'TodoController.delete').as('todos.delete');
